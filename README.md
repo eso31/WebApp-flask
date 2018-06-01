@@ -9,15 +9,15 @@ This web application consumes an API also developed with flask. Here is the link
 https://github.com/eso31/API-flask
 
 
+Before running this web application you should already have running the API-flask project.
+
 
 How to run:
 
-'''
-
+```
 sudo python webapp.py
-
-'''
-
-
+```
 
 Now try access localhost
+
+Now you should be able to search any twitter user and retrieve their information.
