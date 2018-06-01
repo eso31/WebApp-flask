@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="media content-section">
+    <div class="media-body">
+      <h2 class="account-heading">{{ info['screen_name'] }}</h2>
+      <p class="text-secondary">Followers: {{ info['followers_count'] }}</p>
+      <p class="text-secondary">Days: {{ info['days'] }}</p>
+      <p class="text-secondary">Tweet count: {{ info['tweets_count'] }}</p>
+      <p class="text-secondary">Average tweet per day: {{ info['average_tweet_per_day'] }}</p>
+    </div>
+  </div>
+
+  <h3>Timeline</h3>
+  {% for tweet in info['timeline'] %}
+    <article class="media content-section">
+      <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2">{{ tweet['text'] }}</a>
+            <small class="text-muted">{{ tweet['created_at'] }}</small>
+          </div>
+        </div>
+      </article>
+  {% endfor %}
+{% endblock content %}
